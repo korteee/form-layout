@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AppComponent {
   myForm: FormGroup;
+
   constructor(fb: FormBuilder) {
     this.myForm = fb.group({
       firstName: fb.control('', [Validators.required, Validators.minLength(6)]),
@@ -18,5 +19,9 @@ export class AppComponent {
 
   showForm() {
     console.log({ form: this.myForm });
+  }
+
+  clearForm() {
+    this.myForm.reset();
   }
 }

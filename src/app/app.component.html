@@ -3,6 +3,7 @@
     <form app-form-layout
           appSubmittedClass="form-submitted"
           [formGroup]="myForm"
+          (submit)="showForm()"
           class="col-4">
 
       <app-form-field vertical
@@ -28,13 +29,11 @@
 
       <app-form-buttons>
         <button right
-                type="button">Cancel</button>
-        <button right
-                type="submit"
-                (click)="showForm()">Submit</button>
+                type="submit">Submit</button>
 
         <button left
-                type="button">Bar</button>
+                type="button"
+                (click)="clearForm()">Clear</button>
       </app-form-buttons>
 
     </form>
