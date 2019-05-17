@@ -1,0 +1,12 @@
+<div class="form-error-messages"
+     *ngIf="errors">
+
+  <div *ngIf="errors.required">
+    This field is required.
+  </div>
+
+  <div *ngIf="errors.minlength">
+    This field should be at least {{errors.minlength.requiredLength}} characters long.
+  </div>
+
+</div>

@@ -1,0 +1,34 @@
+@import '~bootstrap/scss/bootstrap';
+
+:host {
+  display: block;
+}
+
+.form-field {
+  display: flex;
+  $block: &;
+
+  &--horizontal {
+    flex-direction: row;
+    align-items: center;
+
+    #{$block}__label {
+      width: 30%;
+      text-align: right;
+      margin-right: 15px;
+    }
+  }
+
+  &--vertical {
+    flex-direction: column;
+    justify-content: center;
+
+    #{$block}__label {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+app-form-error-messages {
+  margin-top: 10px;
+}

@@ -1,0 +1,8 @@
+  <label class="form-field"
+         [ngClass]="isHorizontal ? 'form-field--horizontal' : 'form-field--vertical'">
+    <span class="form-field__label">{{label}}</span>
+    <span class="form-field__input">
+      <ng-content></ng-content>
+    </span>
+  </label>
+  <app-form-error-messages [errors]="errors"></app-form-error-messages>

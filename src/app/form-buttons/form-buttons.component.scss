@@ -1,0 +1,23 @@
+@import '~bootstrap/scss/bootstrap';
+
+:host {
+  display: block;
+
+  .form-buttons {
+    &--left {
+      @extend .float-md-left;
+    }
+
+    &--right {
+      margin-left: 5px;
+
+      ::ng-deep {
+        [right] + [right] {
+          margin-left: 5px;
+        }
+      }
+
+      @extend .float-md-right;
+    }
+  }
+}

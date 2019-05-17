@@ -1,0 +1,36 @@
+:host {
+  $host: &;
+  display: block;
+
+  &.form-submitted {
+    ::ng-deep {
+      app-form-error-messages {
+        display: block;
+      }
+    }
+  }
+
+  ::ng-deep {
+    app-form-error-messages {
+      display: none;
+    }
+
+    app-form-field + app-form-field {
+      margin-top: 15px;
+    }
+
+    app-form-field {
+      & + & {
+        margin-top: 15px;
+      }
+
+      &:last-child {
+        margin-top: 15px;
+      }
+    }
+
+    app-form-buttons {
+      margin-top: 20px;
+    }
+  }
+}

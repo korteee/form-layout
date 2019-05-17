@@ -1,18 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormButtonsComponent } from './form-buttons/form-buttons.component';
+import { FormErrorMessagesComponent } from './form-error-messages/form-error-messages.component';
+import { FormFieldComponent } from './form-field/form-field.component';
+import { FormLayoutComponent } from './form-layout/form-layout.component';
+import { SubmittedClassDirective } from './submitted-class.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FormLayoutComponent,
+    FormFieldComponent,
+    FormErrorMessagesComponent,
+    FormButtonsComponent,
+    SubmittedClassDirective
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
