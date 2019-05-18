@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 import { Dictionary } from '../dictionary.interface';
 
@@ -8,7 +8,7 @@ import { Dictionary } from '../dictionary.interface';
   styleUrls: ['./form-field.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FormFieldComponent implements OnInit {
+export class FormFieldComponent {
   @Input() label: string;
 
   @Input() errors: Dictionary<object>;
@@ -22,8 +22,4 @@ export class FormFieldComponent implements OnInit {
   }
 
   isHorizontal: boolean;
-
-  constructor() {}
-
-  ngOnInit() {}
 }
